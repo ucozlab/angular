@@ -1,0 +1,36 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "workshop app",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.6"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^2.0.9",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
+  },
+  "scripts": {
+    "test": "I am the test command!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucozlab/angular.git"
+  },
+  "keywords": [
+    "angular",
+    "shop",
+    "work",
+    "dashboard\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C",
+    "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+    "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+    "\u001b[D\u001b[D\u001b[D"
+  ],
+  "author": "Artem UCOZLAB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ucozlab/angular/issues"
+  },
+  "homepage": "https://github.com/ucozlab/angular#readme"
+}
