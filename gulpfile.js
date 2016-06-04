@@ -44,4 +44,4 @@ gulp.task('default', function () {
     gulp.watch('./app/css/*.css', ['minify-css']);
     //gulp.watch('dev/**/*.js', ['compress']);
 });
-//gulp.task('default', ['webserver']);
+gulp.task('default', ['webserver']);

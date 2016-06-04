@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru" ng-app>
-  <head>
+<html lang="ru" ng-app="uShop">
+
+<head>
     <meta charset="utf-8">
     <title>My HTML File</title>
     <link rel="stylesheet" href="app/css/normalize.css" />
     <link rel="stylesheet" href="app/css/main.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <script src="node_modules/angular/angular.js"></script>
-  </head>
-  <body>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="/app/js/main.js"></script>
+    <script src="/app/js/routes.js"></script>
+</head>
 
-    <p>Nothing here {{'yet' + '!'}}</p>
+<body>
+    <template-header></template-header>
+    <div id="main">
+        <div ng-view></div>
+    </div>
 
-  </body>
+</body>
+
 </html>
