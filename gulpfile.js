@@ -6,41 +6,42 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 
 gulp.task('styles', function () {
-    gulp.src('dev/**/*.scss')
+    gulp.src('./app/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/assets/'));
+        .pipe(gulp.dest('./app/css/'));
 });
 
 gulp.task('minify-css', function () {
-    return gulp.src('./src/assets/css/*.css')
+    return gulp.src('./app/css/*.css')
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./src/assets/css/'));
+        .pipe(gulp.dest('./app/css/'));
 });
 
 gulp.task('compress', function () {
     return gulp.src('dev/**/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./src/assets/js/'));
+        .pipe(gulp.dest('./js/'));
 });
 
 var webserver = require('gulp-webserver');
 
 gulp.task('webserver', function () {
-    gulp.src('src')
+    gulp.src('./')
         .pipe(webserver({
             livereload: true,
             directoryListing: true,
             open: true,
-            directoryListing: {
+            /*directoryListing: {
                 enable: true,
                 path: 'src'
-            }
+            }*/
         }));
 });
 
 //Watch task
 gulp.task('default', function () {
-    gulp.watch('dev/**/*.scss', ['styles']);
-    gulp.watch('./src/assets/css/*.css', ['minify-css']);
-    gulp.watch('dev/**/*.js', ['compress']);
+    gulp.watch('./app/scss/*.scss', ['styles']);
+    gulp.watch('./app/css/*.css', ['minify-css']);
+    //gulp.watch('dev/**/*.js', ['compress']);
 });
+//gulp.task('default', ['webserver']);
