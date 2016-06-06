@@ -11,14 +11,18 @@
     <script src="node_modules/angular-route/angular-route.min.js"></script>
     <script src="/app/js/main.js"></script>
     <script src="/app/js/routes.js"></script>
+    <base href="/">
 </head>
 
 <body>
-    <template-header></template-header>
-    <div id="main">
-        <div ng-view></div>
+    <div id="wrap">
+        <template-header></template-header>
+        <div id="main">
+            <div ng-view></div>
+        </div>
+        <div id="push"></div>
     </div>
-
+    <template-footer></template-footer>
 </body>
 
 </html>

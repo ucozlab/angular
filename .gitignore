@@ -5,4 +5,4 @@
 
 node_modules/*
 !node_modules/angular/
-!node_modules/angular-route/
+!node_modules/angular/angular-route

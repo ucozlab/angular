@@ -29,7 +29,6 @@ gulp.task('webserver', function () {
     gulp.src('./')
         .pipe(webserver({
             livereload: true,
-            directoryListing: true,
             open: true,
             /*directoryListing: {
                 enable: true,
@@ -39,9 +38,9 @@ gulp.task('webserver', function () {
 });
 
 //Watch task
-gulp.task('default', function () {
+gulp.task('default', ['webserver'], function () {
     gulp.watch('./app/scss/*.scss', ['styles']);
     gulp.watch('./app/css/*.css', ['minify-css']);
     //gulp.watch('dev/**/*.js', ['compress']);
 });
-gulp.task('default', ['webserver']);
+//gulp.task('default', ['webserver']);

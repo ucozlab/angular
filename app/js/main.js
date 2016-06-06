@@ -2,8 +2,6 @@
     //angular.module('uShop', [require('angular-route')]);
     var app = angular.module('uShop', ['ngRoute']);
 
-
-
     app.directive("templateHeader", function () {
         return {
             restrict: "E",
@@ -11,7 +9,19 @@
             controller: function () {
 
             },
+            replace: true,
             controllerAs: "headerCtrl"
+        };
+    });
+    app.directive("templateFooter", function () {
+        return {
+            restrict: "E",
+            templateUrl: "/app/tpl/footer.html",
+            controller: function () {
+
+            },
+            replace: true,
+            controllerAs: "footerCtrl"
         };
     });
 
