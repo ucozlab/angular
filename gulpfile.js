@@ -40,7 +40,7 @@ gulp.task('webserver', function () {
 //Watch task
 gulp.task('default', ['webserver'], function () {
     gulp.watch('./app/scss/*.scss', ['styles']);
-    gulp.watch('./app/css/*.css', ['minify-css']);
+    //gulp.watch('./app/css/*.css', ['minify-css']); // normal, just run
     //gulp.watch('dev/**/*.js', ['compress']);
 });
 //gulp.task('default', ['webserver']);
